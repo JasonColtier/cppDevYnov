@@ -1,0 +1,6 @@
+﻿  main.cpp
+  TVector.cpp
+  Génération de code en cours...
+J:\work\Ynov\M2\CPP\M2_Cours1\M2_Cours1\TVector.cpp(93): warning C4715: 'TVector<int>::back' : les chemins de contrôle ne retournent pas tous une valeur
+J:\work\Ynov\M2\CPP\M2_Cours1\M2_Cours1\TVector.cpp(86): warning C4715: 'TVector<int>::front' : les chemins de contrôle ne retournent pas tous une valeur
+  M2_Cours1.vcxproj -> J:\work\Ynov\M2\CPP\M2_Cours1\Debug\M2_Cours1.exe
