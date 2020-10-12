@@ -14,26 +14,28 @@ public:
     void insert(T,int pos);//ajout d'une valeur à la fin
     int size();//combien de valeurs dans mon tableau ?
     T& operator[](int pos);//coppe cette valeur à index i
-    T& at(int pos);
-    T& front();
-    T& back();
+    T& at(int pos);//retourne l'adresse à la position pos
+    T& front(); //retourne l'adresse de la première variable du vector
+    T& back(); // dernière variable du vecteur
     bool empty();// 0 check si il y a des valeurs ou pas
     void clear();//efface toutes les valeurs mais garde la capacité
-    void print();
-    void printAdresses();
+    void print(); // affiche toutes les variables
+    void printAdresses(); // affiche les adresses en mémoire
 	
-    class iterator
+    class iterator // un iterator permet de parcourir le vector
     {
     private:
-        T* ptr;
+        T* ptr;// un  iterator est composé d'un pointeur pointant vers l'adresse d'une des variable du vecteur
     	
     public:
-        explicit iterator(T* p):ptr(p){};
-        int operator*() const;
-        iterator& operator++();
-        iterator& operator++(int i);
+        iterator(T* item):ptr(item){ std::cout << "iterator created ! pointing to :"<<*item<<std::endl; };// constructeur de l'itérateur initialisant son pointeur sur l'adresse de la variable du vector
+        T & operator*();//l'opérateur * pour obtenir la valeur à l'adresse du pointeur en déréférençant
+        iterator & operator++();
+        iterator & operator++(int i);
         bool operator==(iterator& it);
         bool operator!=(iterator& it);
+		iterator operator+(int add);
+		iterator operator-(int sub);
 
     };
 

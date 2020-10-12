@@ -132,66 +132,89 @@ void TVector<T>::printAdresses()
 }
 
 template <typename T>
-int TVector<T>::iterator::operator*() const
+T & TVector<T>::iterator::operator*()
 {
     return *ptr;
 }
 
-//template <typename T>
-//typename TVector<T>::iterator& TVector<T>::iterator::operator++()
-//{
-//    ptr++;
-//    return *this;
-//}
-//
-//template <typename T>
-//typename TVector<T>::iterator& TVector<T>::iterator::operator++(int i)
-//{
-//    return ++(*this);
-//}
-//
-//template <typename T>
-//bool TVector<T>::iterator::operator==(iterator& it)
-//{
-//    return ptr == it.ptr;
-//}
-//
-//template <typename T>
-//bool TVector<T>::iterator::operator!=(iterator& it)
-//{
-//    return !(*this == it);
-//}
+template <typename T>
+typename TVector<T>::iterator& TVector<T>::iterator::operator++()
+{
+	ptr++;//le pointeur de cet itérateur est avancé de 1
+	return (*this);//on retourne cet itérateur
+}
+
+template <typename T>
+typename TVector<T>::iterator& TVector<T>::iterator::operator++(int i)
+{
+	typename TVector<T>::iterator temp = *this;
+	ptr++;
+	return temp;//avance le pointeur mais retourne l'itérateur avec l'ancien pointeur var++
+}
+
+template <typename T>
+bool TVector<T>::iterator::operator==(iterator & it)
+{
+	return ptr == it.ptr;//si le pointeur de l'itérateur actuel est le même que celui passé en paramètre
+}
+
+template <typename T>
+bool TVector<T>::iterator::operator!=(iterator & it)
+{
+	return ptr != it.ptr;
+}
+
+template <typename T>
+typename TVector<T>::iterator TVector<T>::iterator::operator+(int add)
+{
+	typename TVector<T>::iterator tmp(ptr + add);//je crée un itérateur en partant de notre pointeur et en lui ajoutant X
+	return  tmp;
+}
+
+template <typename T>
+typename TVector<T>::iterator TVector<T>::iterator::operator-(int sub)
+{
+	typename TVector<T>::iterator tmp(ptr - sub);
+	return  tmp;
+}
 
 template <typename T>
 typename TVector<T>::iterator TVector<T>::begin()
 {
-    return iterator(array);
+    return iterator(array);//retourne un iterator pointant vers le premier élément
 }
 
 template <typename T>
 typename TVector<T>::iterator TVector<T>::end()
 {
-    return iterator(array + (length-1));
+    return iterator(array + length);//retourne un élément après la fin du tableau
 }
 
 template <typename T>
 typename TVector<T>::iterator TVector<T>::erase(iterator pos)
 {
-	//std::cout << "adress to remove is : " << &pos <<std::endl;
- //   iterator tmp = pos;
- //   tmp.operator++();
- //   capacity--;//il est plus court de 1
+	std::cout << "address to remove is : " << &*pos <<std::endl;
+    //iterator tmp = pos;
+    //tmp++;
+    //length--;//il est plus court de 1
 
- //   //std::copy(tmp, end(), pos);
+    //std::copy(tmp, end(), pos);
 	//
+
+	//ici (*this) est l'itérator déréférencé 
+
+	
+	int i = 0;
+	auto it = (*this).begin();
+	auto end = (*this).end();
+
+	for (it; it != pos; it++, i++);
+
+	for (auto it = pos + 1; it != end; it++, i++)
+		array[i] = array[i + 1];
+
+	length--;
+	
     return pos;
 
-      //std::copy(pos* +1, end(), pos);
 }
-
-//template <typename T>
-//typename TVector<T>::iterator TVector<T>::erase(iterator it_first, iterator it_last)
-//{
-//	
-//}
-

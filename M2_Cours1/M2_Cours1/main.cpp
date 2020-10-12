@@ -33,6 +33,7 @@ int main()//entrée du programme, juste à nommer le fichier main.cpp avec un int 
 
 	
 	std::cout << "at 2 : "<<myVector.at(2) << std::endl;
+	std::cout << "at 2 : "<<myVector.at(2) << std::endl;
 	std::cout << "front " << myVector.front() << std::endl;
 	std::cout << "back " << myVector.back() << std::endl;
 
@@ -45,10 +46,10 @@ int main()//entrée du programme, juste à nommer le fichier main.cpp avec un int 
 
 	myVector.printAdresses();
 	
-	std::cout << " erase at [0] " << *myVector.erase(myVector.begin()) << std::endl;
-	//myVector.print();    
+	std::cout << " erase at [2] " << *myVector.erase(myVector.begin()+2) << std::endl;
 	 
-	myVector.print(); 
+	myVector.print();   
+	//myVector.printAdresses();   
 
 	
 
