@@ -1,7 +1,10 @@
-﻿  TVector.cpp
+﻿  AbstractHero.cpp
+  AwsomeHero.cpp
+  Hero.cpp
+  THero.cpp
   main.cpp
-  Génération de code en cours...
-C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\TVector.cpp(86): warning C4715: 'TVector<int>::front' : les chemins de contrôle ne retournent pas tous une valeur
-C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\TVector.cpp(93): warning C4715: 'TVector<int>::back' : les chemins de contrôle ne retournent pas tous une valeur
-C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\TVector.cpp(152): warning C4172: retourne l'adresse d'une variable locale ou : temp temporaire
+  Generating Code...
+C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\TVector.cpp(86): warning C4715: 'TVector<int>::front': not all control paths return a value
+C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\TVector.cpp(93): warning C4715: 'TVector<int>::back': not all control paths return a value
+C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\TVector.cpp(152): warning C4172: returning address of local variable or temporary: temp
   M2_Cours1.vcxproj -> C:\Work\GIT\cppDevYnov\M2_Cours1\Debug\M2_Cours1.exe

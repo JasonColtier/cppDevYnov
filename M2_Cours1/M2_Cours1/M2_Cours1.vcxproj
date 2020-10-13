@@ -124,19 +124,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AbstractHero.cpp" />
+    <ClCompile Include="AwsomeHero.cpp" />
     <ClCompile Include="BasicBehavior.cpp" />
     <ClCompile Include="CurrentBehavior.cpp" />
     <ClCompile Include="Hero.cpp" />
     <ClCompile Include="IBehavior.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="THero.cpp" />
     <ClCompile Include="TVector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AbstractHero.h" />
+    <ClInclude Include="AwsomeHero.h" />
     <ClInclude Include="BasicBehavior.h" />
     <ClInclude Include="CurrentBehavior.h" />
     <ClInclude Include="Hero.h" />
     <ClInclude Include="IBehavior.h" />
+    <ClInclude Include="THero.h" />
     <ClInclude Include="TVector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

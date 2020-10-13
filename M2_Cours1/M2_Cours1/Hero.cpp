@@ -7,6 +7,5 @@ Hero::Hero()//dans le constructeur
 {
 	// Create a new unique_ptr with a new object.
 	m_pBehavior = std::make_unique<BasicBehavior>();//je dis que je choisis BasicBehavior
-	
 }
 

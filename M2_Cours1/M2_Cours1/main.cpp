@@ -1,6 +1,7 @@
 #include <ostream>
 
 #include "AbstractHero.h"
+#include "AwsomeHero.h"
 #include "Hero.h"
 #include "TVector.h"
 #include "vector"
@@ -11,6 +12,10 @@ int main()//entrée du programme, juste à nommer le fichier main.cpp avec un int 
 	AbstractHero* pHero = new Hero();//j'instancie un nouveau héro avec un pointeur de type AbstractHero
 	pHero->Action(); //j'appelle la fonction Action() de mon héro
 
+	AwsomeHero* p_awsome_hero = new AwsomeHero();
+	p_awsome_hero->Action();
+
+	//TVECTOR
 	std::vector<char> standardVector;
 	TVector<int> myVector;
 
@@ -49,7 +54,6 @@ int main()//entrée du programme, juste à nommer le fichier main.cpp avec un int 
 	std::cout << " erase at [2] " << *myVector.erase(myVector.begin()+2) << std::endl;
 	 
 	myVector.print();   
-	//myVector.printAdresses();   
 
 	
 
