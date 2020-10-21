@@ -2,10 +2,13 @@
 
 #include "AbstractHero.h"
 #include "AwsomeHero.h"
+#include "BasicCustomHero.h"
 #include "Hero.h"
 #include "TVector.h"
-#include "vector"
 #include "TVector.cpp"
+#include "TList.h"
+#include "TList.cpp"
+#include "vector"
 
 int main()//entrée du programme, juste à nommer le fichier main.cpp avec un int / void main()
 {
@@ -14,6 +17,8 @@ int main()//entrée du programme, juste à nommer le fichier main.cpp avec un int 
 
 	AwsomeHero* p_awsome_hero = new AwsomeHero();
 	p_awsome_hero->Action();
+
+	//BasicCustomHero* basic_custom_hero = new BasicCustomHero();
 
 	//TVECTOR
 	std::vector<char> standardVector;
@@ -56,7 +61,27 @@ int main()//entrée du programme, juste à nommer le fichier main.cpp avec un int 
 	myVector.print();   
 
 	
+	//LIST
+	TList<char> myList;  
+	
+	myList.push_back('a');
+	myList.push_back('b');          
+	myList.push_back('c');
 
+	std::cout << "first value : " << myList.Front()->nodeVal << std::endl;
+	std::cout << "end value : " << myList.Back()->prev->nodeVal << std::endl;
+	std::cout << "second value : " << myList.Front()->next->nodeVal << std::endl;
 
+	std::cout << "list size : " << myList.size() << std::endl;
+
+	myList.insert('u', 1);
+	std::cout << "first value : " << myList.Front()->nodeVal << std::endl;    
+	std::cout << "second value : " << myList.Front()->next->nodeVal << std::endl;
+	std::cout << "third value : " << myList.Front()->next->next->nodeVal << std::endl;
+
+	std::cout << "is empty ? "<<myList.empty()<<std::endl;
+	    
+	std::cout << "end"<<std::endl;
+	
 	
 }

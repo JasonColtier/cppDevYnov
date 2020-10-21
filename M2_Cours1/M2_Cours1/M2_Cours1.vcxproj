@@ -76,6 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -126,21 +127,30 @@
     <ClCompile Include="AbstractHero.cpp" />
     <ClCompile Include="AwsomeHero.cpp" />
     <ClCompile Include="BasicBehavior.cpp" />
+    <ClCompile Include="BasicCustomHero.cpp" />
+    <ClCompile Include="cours2_recapTemplate.cpp" />
     <ClCompile Include="CurrentBehavior.cpp" />
+    <ClCompile Include="FullCustomHero.cpp" />
     <ClCompile Include="Hero.cpp" />
     <ClCompile Include="IBehavior.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TCustomHero.cpp" />
     <ClCompile Include="THero.cpp" />
+    <ClCompile Include="TList.cpp" />
     <ClCompile Include="TVector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AbstractHero.h" />
     <ClInclude Include="AwsomeHero.h" />
     <ClInclude Include="BasicBehavior.h" />
+    <ClInclude Include="BasicCustomHero.h" />
     <ClInclude Include="CurrentBehavior.h" />
+    <ClInclude Include="FullCustomHero.h" />
     <ClInclude Include="Hero.h" />
     <ClInclude Include="IBehavior.h" />
+    <ClInclude Include="TCustomHero.h" />
     <ClInclude Include="THero.h" />
+    <ClInclude Include="TList.h" />
     <ClInclude Include="TVector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

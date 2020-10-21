@@ -28,7 +28,7 @@ public:
         T* ptr;// un  iterator est composé d'un pointeur pointant vers l'adresse d'une des variable du vecteur
     	
     public:
-        iterator(T* item):ptr(item){ std::cout << "iterator created ! pointing to :"<<*item<<std::endl; };// constructeur de l'itérateur initialisant son pointeur sur l'adresse de la variable du vector
+        iterator(T* item):ptr(item){ std::cout << "iterator created ! pointing to :"<<*item<<std::endl; }// constructeur de l'itérateur initialisant son pointeur sur l'adresse de la variable du vector
         T & operator*();//l'opérateur * pour obtenir la valeur à l'adresse du pointeur en déréférençant
         iterator & operator++();
         iterator & operator++(int i);

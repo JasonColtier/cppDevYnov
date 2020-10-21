@@ -1,10 +1,22 @@
-﻿  AbstractHero.cpp
-  AwsomeHero.cpp
-  Hero.cpp
+﻿  AwsomeHero.cpp
+  BasicCustomHero.cpp
   THero.cpp
   main.cpp
+C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\TList.cpp(59,20): warning C4018: '<': signed/unsigned mismatch
+C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\TList.cpp(56): message : while compiling class template member function 'void TList<char>::insert(T,int)'
+C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\TList.cpp(56): message :         with
+C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\TList.cpp(56): message :         [
+C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\TList.cpp(56): message :             T=char
+C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\TList.cpp(56): message :         ]
+C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\main.cpp(77): message : see reference to function template instantiation 'void TList<char>::insert(T,int)' being compiled
+C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\main.cpp(77): message :         with
+C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\main.cpp(77): message :         [
+C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\main.cpp(77): message :             T=char
+C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\main.cpp(77): message :         ]
   Generating Code...
+C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\main.cpp(65): message : see reference to class template instantiation 'TList<char>' being compiled
 C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\TVector.cpp(86): warning C4715: 'TVector<int>::front': not all control paths return a value
 C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\TVector.cpp(93): warning C4715: 'TVector<int>::back': not all control paths return a value
+C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\TList.cpp(32): warning C4715: 'TList<char>::empty': not all control paths return a value
 C:\Work\GIT\cppDevYnov\M2_Cours1\M2_Cours1\TVector.cpp(152): warning C4172: returning address of local variable or temporary: temp
   M2_Cours1.vcxproj -> C:\Work\GIT\cppDevYnov\M2_Cours1\Debug\M2_Cours1.exe
