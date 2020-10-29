@@ -22,7 +22,63 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="9912f1f6-4e30-43ab-8f91-0b99ddb2545f" name="Default Changelist" comment="finished point / vecteur + début sphere" />
+=======
+<<<<<<< Updated upstream
+    <list default="true" id="9912f1f6-4e30-43ab-8f91-0b99ddb2545f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../M2_Cours1/.idea/.idea.M2_Cours1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../M2_Cours1/.idea/.idea.M2_Cours1/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../M2_Cours1/.idea/.idea.M2_Cours1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../M2_Cours1/.idea/.idea.M2_Cours1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../M2_Cours1/.vs/M2_Cours1/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../M2_Cours1/.vs/M2_Cours1/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../M2_Cours1/.vs/M2_Cours1/v16/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../M2_Cours1/.vs/M2_Cours1/v16/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/RayTracer/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/RayTracer/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/RayTracer/v16/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/RayTracer/v16/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Debug/RayTracer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/RayTracer.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Debug/RayTracer.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/RayTracer.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Debug/RayTracer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/RayTracer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.log" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/RayTracer.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/RayTracer.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/TPoint.obj" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/TPoint.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/TVector3D.obj" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/TVector3D.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/vc142.idb" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/vc142.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/vc142.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/TVector3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/TVector3D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/main.cpp" afterDir="false" />
+=======
+    <list default="true" id="8b5da118-4698-4fbe-802b-9ccc1fc7d5f7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/CL.command.1.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/CL.read.1.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/CL.write.1.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/RayTracer.lastbuildstate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/link.command.1.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/link.read.1.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/link.write.1.tlog" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/TPoint.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/TVector3D.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/main.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/vc142.idb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/vc142.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Debug/RayTracer.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Debug/RayTracer.ilk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x64/Debug/RayTracer.pdb" afterDir="false" />
+>>>>>>> Stashed changes
+    </list>
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +87,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+<<<<<<< Updated upstream
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -42,16 +99,33 @@
     </option>
   </component>
   <component name="ProjectId" id="1jL0J7fLb6oFzgtmrU2KKsyENg6" />
+<<<<<<< Updated upstream
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+=======
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+  <component name="ProjectId" id="1jWV8jnzsIquaLQqU1eMjmvL2JE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+<<<<<<< Updated upstream
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+=======
+<<<<<<< Updated upstream
+=======
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -113,6 +187,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< Updated upstream
       <changelist id="9912f1f6-4e30-43ab-8f91-0b99ddb2545f" name="Default Changelist" comment="" />
       <created>1603567991850</created>
       <option name="number" value="Default" />
@@ -120,6 +195,14 @@
       <updated>1603567991850</updated>
       <workItem from="1603567997541" duration="6038000" />
       <workItem from="1603574100793" duration="1838000" />
+=======
+      <changelist id="8b5da118-4698-4fbe-802b-9ccc1fc7d5f7" name="Default Changelist" comment="" />
+      <created>1603919744296</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603919744296</updated>
+      <workItem from="1603919759343" duration="364000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="finished point / vecteur + début sphere">
       <created>1604003394450</created>
@@ -134,7 +217,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+<<<<<<< Updated upstream
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+=======
+>>>>>>> Stashed changes
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -146,6 +232,7 @@
         </entry>
       </map>
     </option>
+<<<<<<< Updated upstream
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
@@ -188,4 +275,11 @@
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1603574993333" />
   </component>
+=======
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+>>>>>>> Stashed changes
 </project>
