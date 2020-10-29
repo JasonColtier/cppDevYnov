@@ -23,38 +23,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9912f1f6-4e30-43ab-8f91-0b99ddb2545f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../M2_Cours1/.idea/.idea.M2_Cours1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../M2_Cours1/.idea/.idea.M2_Cours1/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../M2_Cours1/.idea/.idea.M2_Cours1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../M2_Cours1/.idea/.idea.M2_Cours1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../M2_Cours1/.vs/M2_Cours1/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../M2_Cours1/.vs/M2_Cours1/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../M2_Cours1/.vs/M2_Cours1/v16/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../M2_Cours1/.vs/M2_Cours1/v16/Browse.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/RayTracer/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/RayTracer/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/RayTracer/v16/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/RayTracer/v16/Browse.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/RayTracer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/RayTracer.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/RayTracer.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/RayTracer.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug/RayTracer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/RayTracer.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.log" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/CL.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/RayTracer.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/RayTracer.lastbuildstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/link.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/RayTracer.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/TPoint.obj" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/TPoint.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/TVector3D.obj" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/TVector3D.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/vc142.idb" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/vc142.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/Debug/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/Debug/vc142.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RayTracer/TSphere.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/RayTracer.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/RayTracer.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/TPoint.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/TPoint.h" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/TPoint.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/TVector3D.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RayTracer/TVector3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/TVector3D.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RayTracer/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/RayTracer.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/RayTracer.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/TPoint.obj" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/TPoint.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/TVector3D.obj" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/TVector3D.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/vc142.idb" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/vc142.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/vc142.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/RayTracer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/RayTracer.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/RayTracer.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/RayTracer.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/RayTracer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/RayTracer.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,18 +62,30 @@
       <list>
         <option value="$PROJECT_DIR$/RayTracer/TVector3D.h" />
         <option value="$PROJECT_DIR$/RayTracer/main.cpp" />
+        <option value="$PROJECT_DIR$/RayTracer/TPoint.h" />
+        <option value="$PROJECT_DIR$/RayTracer/TSphere.h" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1jL0J7fLb6oFzgtmrU2KKsyENg6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -165,26 +170,35 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="320" key="GridCell.Tab.0.bottom" timestamp="1603575785199">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1604002959550">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="320" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1603575785199" />
-    <state width="1877" height="320" key="GridCell.Tab.0.center" timestamp="1603575785199">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604002959550" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1604002959550">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="320" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1603575785199" />
-    <state width="1877" height="320" key="GridCell.Tab.0.left" timestamp="1603575785199">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604002959550" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1604002959550">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="320" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1603575785199" />
-    <state width="1877" height="320" key="GridCell.Tab.0.right" timestamp="1603575785199">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604002959550" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1604002959550">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="320" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1603575785199" />
-    <state x="773" y="92" key="RiderGenerateDialog" timestamp="1603568054463">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604002959550" />
+    <state x="773" y="92" key="RiderGenerateDialog" timestamp="1604003289173">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="773" y="92" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1603568054463" />
+    <state x="773" y="92" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604003289173" />
+    <state x="787" y="230" key="RollbackChangesDialog" timestamp="1604000585500">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="787" y="230" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604000585500" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1603574993333">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

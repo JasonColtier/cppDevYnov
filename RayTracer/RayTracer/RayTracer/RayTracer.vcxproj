@@ -124,11 +124,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="TPoint.cpp" />
-    <ClCompile Include="TVector3D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TPoint.h" />
+    <ClInclude Include="TSphere.h" />
     <ClInclude Include="TVector3D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

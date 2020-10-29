@@ -1,8 +1,8 @@
 #pragma once
 #include <iostream>
 #include <ostream>
-#include "TPoint.h";
-#include <math.h>;
+#include "TPoint.h"
+#include <math.h>
 
 template <typename T>
 class TVector3D
@@ -30,6 +30,7 @@ public:
         std::cout << "new vector created : " << delta_x << " " << delta_y << " " << delta_z << std::endl;
     }
 
+    //ATTENTION !!! si on ne met pas le & de reference ça crée une nouvelle variable via constructeur par copie !!
     TVector3D(TPoint<T>& point1, TPoint<T>& point2)
     {
         delta_x = point2.GetX() - point1.GetX();
@@ -90,6 +91,8 @@ public:
         delta_y /= div;
         delta_z /= div;
     }
+
+
 
     /*
      * OPERTATIONS SIMPLES
@@ -155,15 +158,15 @@ public:
         return result;
     }
 
-    T Magnitude() // ||a|| ou length
+    double Magnitude() // ||a|| ou length
     {
-    	return sqrt(pow(delta_x,2) + pow(delta_y,2) + pow(delta_z,2));
+        return sqrt(pow(delta_x, 2) + pow(delta_y, 2) + pow(delta_z, 2));
     }
 
     TVector3D Normalize()
     {
         TVector3D<T> result = *this;
-        float mag = result.Magnitude();
+        double mag = result.Magnitude();
         result /= mag;
         return result;
     }
@@ -174,13 +177,12 @@ public:
         result *= -1;
         return result;
     }
-    
 };
 
 template <typename T>
-T Dot(TVector3D<T> &v1, TVector3D<T> &v2)
+T Dot(TVector3D<T>& v1, TVector3D<T>& v2)
 {
-    return v1.GetX()*v2.GetX() + v1.GetY()*v2.GetY() +v1.GetZ()*v2.GetZ();
+    return v1.GetX() * v2.GetX() + v1.GetY() * v2.GetY() + v1.GetZ() * v2.GetZ();
 }
 
 template <typename T>
