@@ -22,33 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9912f1f6-4e30-43ab-8f91-0b99ddb2545f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/RayTracer/TSphere.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RayTracer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/RayTracer.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/RayTracer.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/TPoint.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/TPoint.h" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/TPoint.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/TVector3D.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/TVector3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/TVector3D.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/CL.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/RayTracer.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/RayTracer.lastbuildstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/link.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/RayTracer.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/TPoint.obj" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/TPoint.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/TVector3D.obj" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/TVector3D.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/vc142.idb" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/vc142.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayTracer/x64/Debug/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/RayTracer/x64/Debug/vc142.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/RayTracer.exe" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/RayTracer.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/RayTracer.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/RayTracer.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/RayTracer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/RayTracer.pdb" afterDir="false" />
-    </list>
+    <list default="true" id="9912f1f6-4e30-43ab-8f91-0b99ddb2545f" name="Default Changelist" comment="finished point / vecteur + début sphere" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,6 +121,14 @@
       <workItem from="1603567997541" duration="6038000" />
       <workItem from="1603574100793" duration="1838000" />
     </task>
+    <task id="LOCAL-00001" summary="finished point / vecteur + début sphere">
+      <created>1604003394450</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604003394450</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +150,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="finished point / vecteur + début sphere" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished point / vecteur + début sphere" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1604002959550">
