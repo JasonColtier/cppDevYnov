@@ -6,9 +6,11 @@
 #include <directxmath.h>
 #include <directxcolors.h>
 #include <windowsx.h>
+
+#include "Object.h"
 #include "resource.h"
 
-class Box3D
+class Box3D : Object
 {
 
 public:
@@ -25,7 +27,7 @@ public:
     HRESULT Draw(ID3D11DeviceContext*);
 
     // Return World Transform
-    const DirectX::XMMATRIX& GetTransform() const { return Transform; };
+    // const DirectX::XMMATRIX& GetTransform() const { return Transform; };
 
     // Translate the Box
     void Translate(const DirectX::XMFLOAT3& Translation);
@@ -37,7 +39,7 @@ public:
     void Scale(const DirectX::XMFLOAT3& Scale);
 
 private:
-    DirectX::XMMATRIX Transform; // world transform
+    // DirectX::XMMATRIX Transform; // world transform
 
     // Store API resource
     ID3D11VertexShader* m_pVertexShader = nullptr;

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\jason\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\jason\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Tutorial04_2017.191345789.00" t="ExcludeRecursive" />
+    <e p="C:\Work\GIT\cppDevYnov\ProgBasNiveau\Tutorial04" t="IncludeRecursive">
+      <e p="Box.cpp" t="Include" />
+      <e p="Box.h" t="Include" />
+      <e p="imgui-master" t="Include">
+        <e p="imconfig.h" t="Include" />
+        <e p="imgui.cpp" t="Include" />
+        <e p="imgui.h" t="Include" />
+        <e p="imgui_demo.cpp" t="Include" />
+        <e p="imgui_draw.cpp" t="Include" />
+        <e p="imgui_impl_dx11.cpp" t="Include" />
+        <e p="imgui_impl_dx11.h" t="Include" />
+        <e p="imgui_impl_win32.cpp" t="Include" />
+        <e p="imgui_impl_win32.h" t="Include" />
+        <e p="imgui_internal.h" t="Include" />
+        <e p="imgui_widgets.cpp" t="Include" />
+        <e p="imstb_rectpack.h" t="Include" />
+        <e p="imstb_textedit.h" t="Include" />
+        <e p="imstb_truetype.h" t="Include" />
+      </e>
+      <e p="Object.cpp" t="Include" />
+      <e p="Object.h" t="Include" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="resource.h" t="Include" />
+      <e p="Tutorial04.cpp" t="Include" />
+      <e p="Tutorial04.fx" t="Include" />
+      <e p="Tutorial04.rc" t="Include" />
+      <e p="Tutorial04_2017.sln" t="IncludeFlat" />
+      <e p="Tutorial04_2017.vcxproj" t="IncludeRecursive" />
+      <e p="Tutorial04_PS.hlsl" t="Include" />
+      <e p="Tutorial04_VS.hlsl" t="Include" />
+      <e p="x64\Debug" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
