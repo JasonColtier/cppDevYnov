@@ -1,6 +1,0 @@
-﻿  TVector3D.cpp
-D:\Work\Ynov\GIT\cppDevYnov\RayTracer\RayTracer\RayTracer\TVector3D.h(4,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
-  main.cpp
-D:\Work\Ynov\GIT\cppDevYnov\RayTracer\RayTracer\RayTracer\TVector3D.h(4,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
-  Génération de code en cours...
-  RayTracer.vcxproj -> D:\Work\Ynov\GIT\cppDevYnov\RayTracer\RayTracer\Debug\RayTracer.exe

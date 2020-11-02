@@ -22,23 +22,23 @@ public:
     // ici const veut dire que la valeur ne sera pas modifiée dans la fonction
     TPoint() : coord_x(0), coord_y(0), coord_z(0)
     {
-        std::cout << "new point created : " << coord_x << " " << coord_y << " " << coord_z << std::endl;
+        //std::cout << "new point created : " << coord_x << " " << coord_y << " " << coord_z << std::endl;
     }
     
     TPoint(const T& x, const T& y, const T& z) : coord_x(x), coord_y(y), coord_z(z)
     {
-        std::cout << "new point created : " << coord_x << " " << coord_y << " " << coord_z << std::endl;
+        //std::cout << "new point created : " << coord_x << " " << coord_y << " " << coord_z << std::endl;
     }
 
     TPoint(const T& x) : coord_x(x), coord_y(x), coord_z(x)
     {
-        std::cout << "new point created : " << coord_x << " " << coord_y << " " << coord_z << std::endl;
+        //std::cout << "new point created : " << coord_x << " " << coord_y << " " << coord_z << std::endl;
     }
 
     //constructeur par recopie
     TPoint(const TPoint& refPoint) : coord_x(refPoint.coord_x), coord_y(refPoint.coord_y), coord_z(refPoint.coord_z)
     {
-        std::cout << "new point created by copy : " << coord_x << " " << coord_y << " " << coord_z << std::endl;
+        //std::cout << "new point created by copy : " << coord_x << " " << coord_y << " " << coord_z << std::endl;
     }
 
     T GetX() { return coord_x; }

@@ -127,6 +127,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TPoint.h" />
+    <ClInclude Include="TPolygon.h" />
+    <ClInclude Include="TRay.h" />
     <ClInclude Include="TSphere.h" />
     <ClInclude Include="TVector3D.h" />
   </ItemGroup>

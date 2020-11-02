@@ -4,6 +4,7 @@
 #include <ostream>
 #include "TVector3D.h"
 #include "TPoint.h"
+#include "TPolygon.h"
 #include "TSphere.h"
 
 
@@ -88,5 +89,25 @@ int main()
 	std::cout << std::endl;
 	std::cout << "Creating a sphere";
 	TSphere<int> sphere1;
-	TSphere<int> sphere2(3,point1);
+	TSphere<int> sphere2(600,point1);
+	TSphere<float> sphere3;
+
+	TPoint<int> pointOnSphere = sphere2.GetPointOnSphere(30.0f, 80.0f);
+	std::cout << "point on sphere : "<<pointOnSphere;
+
+	TVector3D<float> normalOnSphere; 
+	normalOnSphere = sphere3.GetNormalOnSphere(30.0f,40.0f);
+	std::cout << "normal on sphere : " << normalOnSphere;
+	std::cout << std::endl;
+	std::cout << std::endl;
+
+	TPoint<float> polyPoint1(0, 0, 0);
+	TPoint<float> polyPoint2(1, 0, 0);
+	TPoint<float> polyPoint3(0, 1, 0);
+	TPoint<float> polyPoint4(0, 1, 1);
+	
+	TPolygon<float> poly(polyPoint1, polyPoint2, polyPoint3, polyPoint4);
+	std::cout << "poly : " << poly<<std::endl;
+
+
 }
