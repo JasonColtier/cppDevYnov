@@ -2,6 +2,7 @@
 #include <iostream>
 #include <iso646.h>
 #include <ostream>
+#include <memory>
 #include "TVector3D.h"
 #include "TPoint.h"
 #include "TPolygon.h"
@@ -12,6 +13,7 @@ int main()
 {
 	std::cout << "Creating a new point" <<std::endl;
 	TPoint<int> point1(1, 3, 6);
+	TPoint<int>* p_Point1 = &point1;
 	TPoint<int> point2(0);
 	TPoint<int> point3(point1);
 	TPoint<int> point4(2,5,3);
@@ -21,12 +23,25 @@ int main()
 	std::cout << std::endl; 
 	std::cout << "Creating a new vector" << std::endl;
 	TVector3D<int> vector1(2, 5, 3);
-	TVector3D<int> vector2(point1,point4);           
+	TVector3D<int> vector2(point1,point4);
 	TVector3D<int> vector3(vector1);           
 	TVector3D<int> vector4(3,-5,4);           
 	TVector3D<int> vector5(2,6,5);           
 	TVector3D<float> vector6(5,5,5);            
 
+
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << "using pointers" << std::endl;
+	point1 += vector1;
+	std::cout << point1 << std::endl;
+	std::cout << *p_Point1 << std::endl;
+
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << "changing vector 2" << std::endl;
+	std::cout << vector2 << std::endl; 
+	
 	std::cout << std::endl; 
 	std::cout << std::endl; 
 	std::cout << "starting operations : vector1 + 2" << std::endl;
@@ -101,13 +116,18 @@ int main()
 	std::cout << std::endl;
 	std::cout << std::endl;
 
-	TPoint<float> polyPoint1(0, 0, 0);
+	TPoint<float> polyPoint1(1, 0, 0);
 	TPoint<float> polyPoint2(1, 0, 0);
 	TPoint<float> polyPoint3(0, 1, 0);
 	TPoint<float> polyPoint4(0, 1, 1);
-	
-	TPolygon<float> poly(polyPoint1, polyPoint2, polyPoint3, polyPoint4);
+
+	//je crée mon polygone en donnant des références à des points car si les points changent, je veux que le polygone change aussi
+	TPolygon<float> poly(&polyPoint1,&polyPoint2, &polyPoint3, &polyPoint4);
 	std::cout << "poly : " << poly<<std::endl;
 
+	polyPoint1 += vector6;
+	
+	std::cout << "polypoint1 : " << polyPoint1 << std::endl;
+	std::cout << "poly : " << poly << std::endl;
 
 }

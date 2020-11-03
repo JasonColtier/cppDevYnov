@@ -1,29 +1,41 @@
 #pragma once
 #include <vector>
+#include <memory>
 #include "TPoint.h"
 
-template <class T>
+template <typename T>
 class TPolygon
 {
 
 	//définit par une suite de points rejoints dans un ordre donné
-	std::vector<TPoint<T>> pointList;
+	//un vecteur de pointeurs vers mes points
+	std::vector<TPoint<T>*> p_PointsVector;
 
 public:
 
-	TPolygon() = default;
+
 	
-	template <class U, class... Ts>
-	TPolygon(U& point, Ts&... points) : TPolygon(points...)
+	TPolygon() = default;
+	~TPolygon()
 	{
-		pointList.insert(pointList.begin(),point);
+		for (auto point = p_PointsVector.begin(); point != p_PointsVector.end(); ++point)
+		{
+			//détruire les pointeurs ?
+		}
+	}
+
+	
+	template <typename U, typename... Ts>
+	TPolygon(U* point, Ts*... points) : TPolygon(points...)
+	{
+		p_PointsVector.insert(p_PointsVector.begin(),point);
 		TPolygon(points...);
 		std::cout << "adding point "<<point<<" to poly "<<std::endl;
 	}
 
-	std::vector<TPoint<T>> GetPointList()
+	std::vector<TPoint<T>*> GetPointList()
 	{
-		return pointList;
+		return p_PointsVector;
 	}
 	
 private:
@@ -37,7 +49,7 @@ std::ostream& operator<<(std::ostream& os, TPolygon<T>& poly)
 	std::string out;
 	for (auto& point : poly.GetPointList()) // access by reference to avoid copying
 	{
-		std::cout << point;
+		std::cout << *point;
 	}
 	return os;
 };
