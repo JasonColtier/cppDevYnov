@@ -126,6 +126,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="TPlan.h" />
     <ClInclude Include="TPoint.h" />
     <ClInclude Include="TPolygon.h" />
     <ClInclude Include="TRay.h" />

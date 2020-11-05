@@ -116,18 +116,29 @@ int main()
 	std::cout << std::endl;
 	std::cout << std::endl;
 
-	TPoint<float> polyPoint1(1, 0, 0);
-	TPoint<float> polyPoint2(1, 0, 0);
-	TPoint<float> polyPoint3(0, 1, 0);
-	TPoint<float> polyPoint4(0, 1, 1);
+	TPoint<float> polyPoint1(1, 1, 0);
+	TPoint<float> polyPoint2(-1, 1, 0);
+	TPoint<float> polyPoint3(-1, -1, 0);
+	TPoint<float> polyPoint4(1, -1, 1);
 
 	//je crée mon polygone en donnant des références à des points car si les points changent, je veux que le polygone change aussi
 	TPolygon<float> poly(&polyPoint1,&polyPoint2, &polyPoint3, &polyPoint4);
 	std::cout << "poly : " << poly<<std::endl;
 
-	polyPoint1 += vector6;
+	//polyPoint1 += vector6;
 	
-	std::cout << "polypoint1 : " << polyPoint1 << std::endl;
-	std::cout << "poly : " << poly << std::endl;
+	//std::cout << "polypoint1 : " << polyPoint1 << std::endl;
+	//std::cout << "poly : " << poly << std::endl;
 
+	TPoint<float> center(0.5f, 0, 0);
+	int inside = IsPointInPolygon(poly.GetPointList().size(), poly, center);
+	std::cout << "inside : " << inside << std::endl;
+
+
+	TPoint<float> polyPoint5(-1.2, -0.5f, 0);
+	TPoint<float> polyPoint6(1.2f, 1, 1);
+	TPolygon<float> poly2(&polyPoint1, &polyPoint2, &polyPoint3, &polyPoint4, &polyPoint5, &polyPoint6);
+
+	TPolygon<float> convex = ConvexFromPolygon(poly2);
+	std::cout << "convex : " << convex << std::endl;
 }

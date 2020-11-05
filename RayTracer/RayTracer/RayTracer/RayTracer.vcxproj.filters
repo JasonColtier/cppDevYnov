@@ -35,5 +35,8 @@
     <ClInclude Include="TPolygon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TPlan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
