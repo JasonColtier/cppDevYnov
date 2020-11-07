@@ -125,8 +125,9 @@ int main()
 	TPolygon<float> poly(&polyPoint1,&polyPoint2, &polyPoint3, &polyPoint4);
 	std::cout << "poly : " << poly<<std::endl;
 
+
+	//modification d'un point du polygone pour vérifier que ce polygone est bien mis à jour aussi
 	//polyPoint1 += vector6;
-	
 	//std::cout << "polypoint1 : " << polyPoint1 << std::endl;
 	//std::cout << "poly : " << poly << std::endl;
 
@@ -135,10 +136,12 @@ int main()
 	std::cout << "inside : " << inside << std::endl;
 
 
-	TPoint<float> polyPoint5(-1.2, -0.5f, 0);
+	TPoint<float> polyPoint5(-1.2f, -0.5f, 0);
 	TPoint<float> polyPoint6(1.2f, 1, 1);
 	TPolygon<float> poly2(&polyPoint1, &polyPoint2, &polyPoint3, &polyPoint4, &polyPoint5, &polyPoint6);
 
 	TPolygon<float> convex = ConvexFromPolygon(poly2);
 	std::cout << "convex : " << convex << std::endl;
 }
+
+//

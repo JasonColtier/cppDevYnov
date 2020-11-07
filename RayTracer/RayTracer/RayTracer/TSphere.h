@@ -6,6 +6,7 @@ class TSphere
 {
 
 private:
+	
     T rayon;
     TPoint<T> centerPoint;
     
@@ -64,6 +65,9 @@ public:
         TVector3D<float> normal(centerPoint, surfacePoint);
         normal.Normalize();
         return normal;
+
+        //return TVector3D<T>(centerPoint, point).Normalize();
+    	//il me faut juste un point en coo
     }
 
     TVector3D<float> GetNormalOnSphere(TPoint<T> surfacePoint)

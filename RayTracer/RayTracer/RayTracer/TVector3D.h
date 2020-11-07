@@ -171,6 +171,8 @@ public:
         return result;
     }
 
+	//renvoit un nouveau vecteur normalisé
+
     TVector3D Invert()
     {
         TVector3D<T> result = *this;
@@ -190,3 +192,6 @@ std::ostream& operator<<(std::ostream& os, TVector3D<T>& vector)
 {
     return os << "(" << vector.GetX() << ", " << vector.GetY() << ", " << vector.GetZ() << ")";
 };
+
+//il faut spécialiser pour chaque type d'élément normalement (float, int ...)
+//normalement il faut rajouter le friend dans la classe en public

@@ -11,8 +11,11 @@ class TVector3D;
 template <typename T>
 class TPoint
 {
+	//on s'assuer que notre T est un nombre (bool int float double...) =/= isArithmetic pour utiliser que les nombres
     static_assert(std::is_pod<T>::value, "not a number !");
 
+    friend std::ostream& operator<<(std::ostream& os, const TVector3D<int>& point);
+	
 private:
     //mes coordonnées de type T
     T coord_x;
@@ -101,8 +104,14 @@ public:
 //override de l'operateur << pour pouvoir faire un cout de mon point
 //important de le mettre en dehors de la classe
 // la référence à l'ostream permet de continuer le cout
-template <typename T>
-std::ostream& operator<<(std::ostream& os, TPoint<T>& point)
-{
-    return os <<"("<< point.GetX() << ", " << point.GetY() << ", " << point.GetZ()<<")";
-};
+//template <typename T>
+//std::ostream& operator<<(std::ostream& os, TPoint<T>& point)
+//{
+//    return os <<"("<< point.GetX() << ", " << point.GetY() << ", " << point.GetZ()<<")";
+//};
+
+
+//std::ostream& operator<<(std::ostream& os,const TPoint<int>& point)
+//{
+//    return os <<"("<< point.coord_x << ", " << point.GetY() << ", " << point.GetZ()<<")";
+//};
