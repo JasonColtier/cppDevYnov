@@ -3,6 +3,8 @@
 #include <iso646.h>
 #include <ostream>
 #include <memory>
+
+#include "TList.h"
 #include "TVector3D.h"
 #include "TPoint.h"
 #include "TPolygon.h"
@@ -13,22 +15,20 @@
 int main()
 {
 
-	/*
-	 *	Vecteur conteneur
-	 */
-	std::cout <<"---- CUSTOM VECTOR CONTENER -----"<< std::endl;
+
+	std::cout << "---- CUSTOM VECTOR CONTENER -----" << std::endl;
 
 	TVector<int> customVector1;//constructeur
 	TVector<int> customVector2(8);//constructeur avec taille
-	TVector<int> customVector3({1,5,3,4});//constructeur avec list
+	TVector<int> customVector3({ 1,5,3,4 });//constructeur avec list
 	std::cout << std::endl;
-	std::cout << "size of last vector : "<< customVector3.Size() <<std::endl;//fonction size
+	std::cout << "size of last vector : " << customVector3.Size() << std::endl;//fonction size
 	std::cout << customVector3 << std::endl;
 	customVector3.Push_back(6);//fonction pushback
 	std::cout << customVector3 << std::endl;
-	customVector3.Push_back({5,8,3});//fonction pushback de list
+	customVector3.Push_back({ 5,8,3 });//fonction pushback de list
 	std::cout << customVector3 << std::endl;
-	customVector3.Insert(100,3);//fonction insert
+	customVector3.Insert(100, 3);//fonction insert
 	std::cout << customVector3 << std::endl;
 	customVector3.Sort();//fonction sort
 	std::cout << customVector3 << std::endl;
@@ -36,10 +36,23 @@ int main()
 	customVector4 = customVector3;//operateur =
 	std::cout << customVector4[3] << std::endl;// operator []
 	std::cout << customVector4.At(1) << std::endl;// pareil que At
-	customVector4.Erase(customVector4.Begin() +7);//Erase
+	customVector4.Erase(customVector4.Begin() + 7);//Erase
 	std::cout << customVector4 << std::endl;
-	
+	customVector4.Applyfunction([](int& a)//application d'une fonction à tous les élements de mon tableau
+		{
+			a += 2;
+		});
+	std::cout << customVector4 << std::endl;
 
+	
+	std::cout << "\n\n\n---- CUSTOM LIST CONTENER -----" << std::endl;
+	TList<int> customList1;
+	customList1.Push_back(2);
+	customList1.Push_back(8);
+	customList1.Push_back(15);
+	std::cout << customList1 << std::endl;
+	customList1.Insert(99,1);
+	std::cout << customList1 << std::endl;
 
 
 

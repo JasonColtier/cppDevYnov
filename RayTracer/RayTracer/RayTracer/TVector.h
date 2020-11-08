@@ -3,6 +3,7 @@
 #include <iostream>
 #include <ostream>
 #include <algorithm>
+#include <functional>
 
 template <typename T>
 class TVector
@@ -98,13 +99,13 @@ public:
 	Iterator End() { return Iterator(array + length); }//retourne un pointeur vers le dernier élément
 
 	T& Front() {//retourne le premier élément du tableau
-		if (length !=0)
+		if (length != 0)
 			return array[0];
 	}
 
 	T& Back()//retourne le dernier élément du tableau
 	{
-		if (length !=0)
+		if (length != 0)
 			return array[length - 1];
 	}
 
@@ -210,7 +211,7 @@ public:
 	}
 
 	//retourne la distance entre deux itérateurs
-	static size_t Distance(ConstIterator it1,ConstIterator it2)
+	static size_t Distance(ConstIterator it1, ConstIterator it2)
 	{
 		return static_cast<size_t>((it1 - it2) * sizeof(it1) / sizeof(T));
 	}
@@ -234,6 +235,17 @@ public:
 
 		length--;
 
+	}
+
+
+
+	//applique une fonction sur tout mon tableau
+	void Applyfunction(const std::function<void(T&)>& maFonction)
+	{
+		for (auto it = Begin(); it != End(); it++)//pour tous les éléments de mon tableau
+		{
+			maFonction(const_cast<T&>(*it));
+		}
 	}
 
 
