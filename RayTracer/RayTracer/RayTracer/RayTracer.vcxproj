@@ -124,13 +124,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TList.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="TList.h" />
     <ClInclude Include="TPlan.h" />
     <ClInclude Include="TPoint.h" />
     <ClInclude Include="TPolygon.h" />
     <ClInclude Include="TRay.h" />
     <ClInclude Include="TSphere.h" />
+    <ClInclude Include="TVector.h" />
     <ClInclude Include="TVector3D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
