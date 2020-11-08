@@ -48,8 +48,8 @@ public:
 
 	TList()
 	{
-		head = new Node<T>;
-		tail = new Node<T>;
+		head = new Node<T>;//initialisation de la première node
+		tail = new Node<T>;//initialisation de la dernière node
 
 		length = 0;
 		head->next = tail;//sera modifiée après la première valeur ajoutée
@@ -60,7 +60,7 @@ public:
 	}
 
 	Node<T>* Front() const { return head->next; }//fonction begin retourne la première vrai node de la liste
-	Node<T>* Back() const { return tail->prev; }//fonction begin retourne l'adresse de head = la fin du sandwich !
+	Node<T>* Back() const { return tail; }// retourne la dernière node = la fin du sandwich !
 
 	int Size()
 	{

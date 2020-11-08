@@ -7,15 +7,14 @@
 template <typename T>
 class TVector3D
 {
-    static_assert(std::is_pod<T>::value, "not a number !");
+    static_assert(std::is_arithmetic<T>::value, "not a number !");
 
+    friend std::ostream& operator<<(std::ostream& os, const TVector3D<int>& vector);
+    friend std::ostream& operator<<(std::ostream& os, const TVector3D<float>& vector);
+	
 private:
     //coordonn�es de mon vecteur
     T delta_x;
-public:
-
-
-private:
     T delta_y;
     T delta_z;
 
@@ -47,7 +46,7 @@ public:
 
     ~TVector3D()
     {
-        std::cout << " ~ ";
+        //std::cout << " ~ ";
         // std::cout<<delta_x<<" " <<delta_y<<" " <<delta_z<<" ";
     }
 
@@ -163,7 +162,7 @@ public:
         return sqrt(pow(delta_x, 2) + pow(delta_y, 2) + pow(delta_z, 2));
     }
 
-    TVector3D Normalize()
+    TVector3D<float> Normalize()
     {
         TVector3D<T> result = *this;
         double mag = result.Magnitude();
@@ -187,11 +186,13 @@ T Dot(TVector3D<T>& v1, TVector3D<T>& v2)
     return v1.GetX() * v2.GetX() + v1.GetY() * v2.GetY() + v1.GetZ() * v2.GetZ();
 }
 
-template <typename T>
-std::ostream& operator<<(std::ostream& os, TVector3D<T>& vector)
+std::ostream& operator<<(std::ostream& os, const TVector3D<int>& vector)
 {
-    return os << "(" << vector.GetX() << ", " << vector.GetY() << ", " << vector.GetZ() << ")";
+    return os << "(" << vector.delta_x << ", " << vector.delta_y << ", " << vector.delta_z << ")";
 };
 
-//il faut spécialiser pour chaque type d'élément normalement (float, int ...)
-//normalement il faut rajouter le friend dans la classe en public
+
+std::ostream& operator<<(std::ostream& os, const TVector3D<float>& vector)
+{
+    return os << "(" << vector.delta_x << ", " << vector.delta_y << ", " << vector.delta_z << ")";
+};

@@ -12,9 +12,10 @@ template <typename T>
 class TPoint
 {
 	//on s'assuer que notre T est un nombre (bool int float double...) =/= isArithmetic pour utiliser que les nombres
-    static_assert(std::is_pod<T>::value, "not a number !");
+    static_assert(std::is_arithmetic<T>::value, "not a number !");
 
-    friend std::ostream& operator<<(std::ostream& os, const TVector3D<int>& point);
+    friend std::ostream& operator<<(std::ostream& os, const TPoint<int>& point);
+    friend std::ostream& operator<<(std::ostream& os, const TPoint<float>& point);
 	
 private:
     //mes coordonnées de type T
@@ -45,9 +46,9 @@ public:
         //std::cout << "new point created by copy : " << coord_x << " " << coord_y << " " << coord_z << std::endl;
     }
 
-    T GetX() { return coord_x; }
-    T GetY() { return coord_y; }
-    T GetZ() { return coord_z; }
+    T GetX() const { return coord_x; }
+    T GetY() const { return coord_y; }
+    T GetZ() const { return coord_z; }
 
     void set_coord_x(const T& coord_x)
     {
@@ -101,17 +102,14 @@ public:
     }
 };
 
-//override de l'operateur << pour pouvoir faire un cout de mon point
-//important de le mettre en dehors de la classe
-// la référence à l'ostream permet de continuer le cout
-//template <typename T>
-//std::ostream& operator<<(std::ostream& os, TPoint<T>& point)
-//{
-//    return os <<"("<< point.GetX() << ", " << point.GetY() << ", " << point.GetZ()<<")";
-//};
 
 
-//std::ostream& operator<<(std::ostream& os,const TPoint<int>& point)
-//{
-//    return os <<"("<< point.coord_x << ", " << point.GetY() << ", " << point.GetZ()<<")";
-//};
+std::ostream& operator<<(std::ostream& os,const TPoint<int>& point)
+{
+    return os <<"("<< point.coord_x << ", " << point.coord_y << ", " << point.coord_z<<")";
+};
+
+std::ostream& operator<<(std::ostream& os, const TPoint<float>& point)
+{
+    return os << "(" << point.coord_x << ", " << point.coord_y << ", " << point.coord_z << ")";
+};

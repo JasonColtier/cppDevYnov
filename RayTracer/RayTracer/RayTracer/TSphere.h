@@ -5,6 +5,8 @@ template <typename T>
 class TSphere
 {
 
+    static_assert(std::is_arithmetic<T>::value, "not a number !");
+
 private:
 	
     T rayon;
@@ -16,7 +18,7 @@ public:
         std::cout << "new default sphere created : " << rayon << " " << centerPoint << std::endl;
     }
 
-    TSphere(T rayon, TPoint<T>& center) : rayon(rayon), centerPoint(center)
+    TSphere(const T& rayon,const TPoint<T>& center) : rayon(rayon), centerPoint(center)
     {
         std::cout << "new sphere created rayon : " << rayon << " center point : " << centerPoint << std::endl;
     }
@@ -43,10 +45,8 @@ public:
         centerPoint = center_point;
     }
     
-    //fonction pour retourner la normale d'un point sur la sphère
-    //point définit par angle X
-    // TVector3D<T> GetNormalAtPoint()
 
+    //utilisation de coordonnées sphériques
 	TPoint<T> GetPointOnSphere(float angleAroundZ, float heightAngle)
     {
     	
@@ -58,21 +58,10 @@ public:
         return point;
     }
 
-	TVector3D<float> GetNormalOnSphere(float angleAroundZ, float heightAngle)
+	//retourne un vecteur normalisé basé sur le centre et un point
+    TVector3D<float> GetNormalOnSphere(TPoint<T> point)
     {
-
-        TPoint<float> surfacePoint = GetPointOnSphere(angleAroundZ, heightAngle);
-        TVector3D<float> normal(centerPoint, surfacePoint);
-        normal.Normalize();
-        return normal;
-
-        //return TVector3D<T>(centerPoint, point).Normalize();
-    	//il me faut juste un point en coo
-    }
-
-    TVector3D<float> GetNormalOnSphere(TPoint<T> surfacePoint)
-    {
-        TVector3D<float> normal(centerPoint, surfacePoint);
+        TVector3D<float> normal(centerPoint, point);
         normal.Normalize();
         return normal;
     }
