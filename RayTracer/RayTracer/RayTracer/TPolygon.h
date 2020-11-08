@@ -16,20 +16,15 @@ public:
 
 	
 	TPolygon() = default;
-	~TPolygon()
-	{
-		for (auto point = p_PointsVector.begin(); point != p_PointsVector.end(); ++point)
-		{
-			//détruire les pointeurs ?
-		}
-	}
+	~TPolygon() = default;//à finir?
+
 
 	TPoint<T>* operator[](int point)
 	{
 		return p_PointsVector.at(point);
 	}
 
-	
+	//pourrait être remplacé par std initialize list plus facile à manipuler
 	template <typename U, typename... Ts>
 	TPolygon(U* point, Ts*... points) : TPolygon(points...)
 	{
@@ -65,10 +60,11 @@ std::ostream& operator<<(std::ostream& os, TPolygon<T>& poly)
 };
 
 template <typename T>
-int IsPointInPolygon(int nvert, TPolygon<T>& poly, TPoint<T>& point)
+int IsPointInPolygon(int nvert, TPolygon<T>& poly, TPoint<T>& point)//fonction permettant de déterminer si un point est dans un polygone ou pas
 {
 	std::vector<TPoint<T>*> polyPoints = poly.GetPointList();
-
+	//I run a semi - infinite ray horizontally(increasing x, fixed y) out from the test point, and count how many edges it crosses.
+	//At each crossing, the ray switches between insideand outside.This is called the Jordan curve theorem.
 	
 	int i, j, c = 0;
 	for (i = 0, j = nvert - 1; i < nvert; j = i++) {
@@ -77,17 +73,6 @@ int IsPointInPolygon(int nvert, TPolygon<T>& poly, TPoint<T>& point)
 		if (((currentPointI->GetY() > point.GetY()) != (currentPointJ->GetY() > point.GetY())) &&
 			(point.GetX() < (currentPointJ->GetX() - currentPointI->GetX()) * (point.GetY() - currentPointI->GetY()) / (currentPointJ->GetY() - currentPointI->GetY()) + currentPointI->GetX()))
 			c = !c;
-		//waw la magie
 	}
 	return c;
-}
-
-template <typename T>
-int orientation(TPoint<T>& p, TPoint<T>& q, TPoint<T>& r)
-{
-	int val = (q.GetX() - p.GetY()) * (r.GetX() - q.GetX()) -
-		(q.GetX() - p.GetX()) * (r.GetY() - q.GetY());
-
-	if (val == 0) return 0;  // colinear 
-	return (val > 0) ? 1 : 2; // clock or counterclock wise 
 }

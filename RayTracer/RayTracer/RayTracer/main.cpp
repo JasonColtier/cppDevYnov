@@ -5,9 +5,11 @@
 #include <memory>
 
 #include "TList.h"
+#include "TPlan.h"
 #include "TVector3D.h"
 #include "TPoint.h"
 #include "TPolygon.h"
+#include "TRay.h"
 #include "TSphere.h"
 #include "TVector.h"
 
@@ -89,7 +91,9 @@ int main()
 	std::cout << vector1  <<std::endl;
 	std::cout << "vector2 =  vector1 + 2" << std::endl;
 	vector2 = vector1 + 2;
+	TVector3D<int> v = vector1 + 2;
 	std::cout << vector2  <<std::endl;
+	std::cout << v  <<std::endl;
 	
 	std::cout << "- 1" << std::endl;
 	vector1 -= 1;
@@ -178,5 +182,13 @@ int main()
 	int inside = IsPointInPolygon(poly.GetPointList().size(), poly, center);
 	std::cout << "inside : " << inside << std::endl;
 
+	std::cout << "\n\n\n---- Ray -----" << std::endl;
+	TRay<int> ray(point1,vector1);
+	std::cout << "origin : " << ray.GetOrigin() << " direction : " << ray.GetDirection();
+
+	std::cout << "\n\n\n---- Plan -----" << std::endl;
+	TPlan<int> plan(vector1,10);
+	std::cout << "origin : " << plan.GetDistance() << " normal : " << plan.GetNormal();
+	
 }
 

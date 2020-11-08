@@ -20,8 +20,8 @@ public:
 	}
 
 
-	TVector3D<T> GetNormal() { return normal; }
-	TVector3D<T> GetDistance() { return distance; }
+	TVector3D<T> GetNormal()  { return normal; }
+	float GetDistance()  { return distance; }
 
 	TVector3D<T> GetNormalAt(const TPoint<T>& point) { return normal; }
 

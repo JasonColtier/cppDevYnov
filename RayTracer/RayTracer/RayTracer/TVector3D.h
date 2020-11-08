@@ -38,11 +38,8 @@ public:
         std::cout << "new vector created by points : " << delta_x << " " << delta_y << " " << delta_z << std::endl;
     }
 
-    TVector3D(TVector3D& ref_vector) : delta_x(ref_vector.delta_x), delta_y(ref_vector.delta_y),
-                                       delta_z(ref_vector.delta_z)
-    {
-        std::cout << "new vector created by copy : " << delta_x << " " << delta_y << " " << delta_z << std::endl;
-    }
+    TVector3D(const TVector3D& ref_vector) = default;
+    TVector3D(TVector3D&& ref_vector) = default;
 
     ~TVector3D()
     {
@@ -63,6 +60,9 @@ public:
     /*
      * OPERATIONS AVEC =
      */
+    TVector3D& operator=(const TVector3D& vector) = default;
+    TVector3D& operator=(TVector3D&& vector) = default;
+	
     void operator+=(T add)
     {
         delta_x += add;

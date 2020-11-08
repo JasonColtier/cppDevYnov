@@ -15,16 +15,16 @@ public:
 		std::cout << "new  defalut Ray created : " << std::endl;
 
 	}
-	TRay(const TPoint<T>& origin, const TVector3D<T>& direction) : ray(origin,direction)
+	TRay(TPoint<T>& origin, TVector3D<T>& direction) : ray(origin,direction)
 	{
-		std::cout << "new Ray created, origin : " << origin << ", direction :  " << direction << std::endl;
+		//std::cout << "new Ray created, origin : " << origin << ", direction :  " << direction << std::endl;
 
 	}
 	~TRay() = default;
 
 
-	TPoint<T> GetOrigin() const { return ray.first; }
-	TVector3D<T> GetDirection() const { return ray.second; }
+	TPoint<T> GetOrigin() { return ray.first; }
+	TVector3D<T> GetDirection() { return ray.second; }
 	
 };
 
