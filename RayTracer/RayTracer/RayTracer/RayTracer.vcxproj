@@ -126,6 +126,11 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="IObject.h" />
+    <ClInclude Include="ISource.h" />
+    <ClInclude Include="TCamera.h" />
+    <ClInclude Include="TLight.h" />
     <ClInclude Include="TList.h" />
     <ClInclude Include="TPlan.h" />
     <ClInclude Include="TPoint.h" />

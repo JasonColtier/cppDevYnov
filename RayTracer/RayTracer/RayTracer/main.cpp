@@ -4,6 +4,8 @@
 #include <ostream>
 #include <memory>
 
+
+#include "Color.h"
 #include "TList.h"
 #include "TPlan.h"
 #include "TVector3D.h"
@@ -189,6 +191,26 @@ int main()
 	std::cout << "\n\n\n---- Plan -----" << std::endl;
 	TPlan<int> plan(vector1,10);
 	std::cout << "origin : " << plan.GetDistance() << " normal : " << plan.GetNormal();
-	
+
+
+	//Couleurs
+	std::cout << "\n\n\n---- Color -----" << std::endl;
+	Color maCouleur1;
+	std::cout << "maCouleur1 : " << maCouleur1 << std::endl;
+
+	Color maCouleurRouge(1,0,0,1);
+	std::cout << "maCouleurRouge : " << maCouleurRouge << std::endl;
+
+	Color maCouleurBleue(0,0,1,1);
+	std::cout << "maCouleurBleue : " << maCouleurBleue << std::endl;
+
+	Color mixColor = maCouleurBleue + maCouleurRouge;
+	std::cout << "mix color : " <<  mixColor << std::endl;
+
+	mixColor *= 2;
+	std::cout << "*2 color : " <<  mixColor << std::endl;
+	std::cout << "brightness color : " <<  mixColor.Brightness() << std::endl;
+	std::cout << "average color : " <<  mixColor.Average(maCouleurRouge) << std::endl;
+
 }
 
