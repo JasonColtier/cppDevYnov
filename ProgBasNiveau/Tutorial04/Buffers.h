@@ -14,11 +14,15 @@ struct ConstantBuffer
 	XMMATRIX mView;
 	//Transforme vertice : perspective
 	XMMATRIX mProjection;
+
+	float mSpecular;
+
+	XMFLOAT3 dummy;
 };
 
 enum LightTypes { Directional = 1, Spot = 2, Point = 3 };
 
-struct Light // quelle est le pramamètre qui définit map lumière ?
+struct LightStruct // quelle est le pramamètre qui définit map lumière ?
 {
 	XMFLOAT4 mPosition;
 
@@ -36,5 +40,5 @@ struct Light // quelle est le pramamètre qui définit map lumière ?
 
 struct ConstantBufferLights
 {
-	Light lights[2];
+	LightStruct lights[3];
 };

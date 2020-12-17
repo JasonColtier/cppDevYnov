@@ -440,10 +440,13 @@ HRESULT InitDevice()
 void InitScene(ID3D11Device* pDevice)
 {
 	// The Box
+	g_Box.SetObjectColor(XMFLOAT4(1,0,0,1));
+	g_Box.SetObjectSpecular(1);
 	g_Box.Init(pDevice);
+	g_Ground.SetObjectColor(XMFLOAT4(0,1,0,1));
+	g_Ground.SetObjectSpecular(100);
 	g_Ground.Init(pDevice);
 	g_Ground.Scale(XMFLOAT3(5, 0.1f, 5));
-
 
 
 	g_Camera.SetPosition(XMVectorSet(0.0f, 5.0f, -10.0f, 0.0f));
@@ -459,6 +462,29 @@ void InitScene(ID3D11Device* pDevice)
 
 	p_scene3d = new Scene3D;
 
+	LightStruct light1;
+	light1.mPosition = XMFLOAT4(-2.0f, 1.5f, -1.0f,1.0f);
+	light1.mDirection = XMFLOAT4(1.0f, 1.0f, 1.0f,1.0f);
+	light1.mColor = XMFLOAT4(0, 0, 1,1);
+	light1.mType = LightTypes::Point;
+
+	LightStruct light2;
+	light2.mPosition = XMFLOAT4(2.0f, 1.5f, 1.0f,1.0f);
+	light2.mDirection = XMFLOAT4(1.0f, 1.0f, 1.0f,1.0f);
+	light2.mColor = XMFLOAT4(1, 0, 0,1);
+	light2.mType = LightTypes::Point;
+	light2.mAngle = 30;
+
+	LightStruct light3;
+	light3.mPosition = XMFLOAT4(0.0f, 2.f, -1.0f,1.0f);
+	light3.mDirection = XMFLOAT4(1.0f, 1.0f, 1.0f,1.0f);
+	light3.mColor = XMFLOAT4(1, 1, 1,1);
+	light3.mType = LightTypes::Point;
+	
+	p_scene3d->AddLight(&light1);
+	p_scene3d->AddLight(&light2);
+	p_scene3d->AddLight(&light3);
+	 
 	p_scene3d->AddObject(&g_Box);
 	p_scene3d->AddObject(&g_Ground);
 }
@@ -656,21 +682,21 @@ void Render()
 	g_pImmediateContext->PSSetConstantBuffers(1, 1, &g_pConstantBufferLights);
 
 
-	ConstantBufferLights lightsBuffer;
-
-	lightsBuffer.lights[0].mPosition = XMFLOAT4(-2.0f, 2.0f, -1.0f,1.0f);
-	lightsBuffer.lights[0].mDirection = XMFLOAT4(1.0f, 1.0f, 1.0f,1.0f);
-	lightsBuffer.lights[0].mColor = XMFLOAT4(0, 1, 1,1);
-	lightsBuffer.lights[0].mType = LightTypes::Point;
-
-
-	
-	lightsBuffer.lights[1].mPosition = XMFLOAT4(2.0f, 2.0f, -1.0f,1.0f);
-	lightsBuffer.lights[1].mDirection = XMFLOAT4(1.0f, 1.0f, 1.0f,1.0f);
-	lightsBuffer.lights[1].mColor = XMFLOAT4(1, 0, 1,1);
-	lightsBuffer.lights[1].mType = LightTypes::Spot;
-	lightsBuffer.lights[1].mAngle = 30;
-	g_pImmediateContext->UpdateSubresource(g_pConstantBufferLights, 0, nullptr, &lightsBuffer, 0, 0);
+	// ConstantBufferLights lightsBuffer;
+	//
+	// lightsBuffer.lights[0].mPosition = XMFLOAT4(-2.0f, 2.0f, -1.0f,1.0f);
+	// lightsBuffer.lights[0].mDirection = XMFLOAT4(1.0f, 1.0f, 1.0f,1.0f);
+	// lightsBuffer.lights[0].mColor = XMFLOAT4(0, 1, 1,1);
+	// lightsBuffer.lights[0].mType = LightTypes::Point;
+	//
+	//
+	//
+	// lightsBuffer.lights[1].mPosition = XMFLOAT4(2.0f, 2.0f, -1.0f,1.0f);
+	// lightsBuffer.lights[1].mDirection = XMFLOAT4(1.0f, 1.0f, 1.0f,1.0f);
+	// lightsBuffer.lights[1].mColor = XMFLOAT4(1, 0, 1,1);
+	// lightsBuffer.lights[1].mType = LightTypes::Spot;
+	// lightsBuffer.lights[1].mAngle = 30;
+	// g_pImmediateContext->UpdateSubresource(g_pConstantBufferLights, 0, nullptr, &lightsBuffer, 0, 0);
 
 
 	//
@@ -692,7 +718,7 @@ void Render()
 
  //   g_Ground.Draw(g_pImmediateContext);
 
-	p_scene3d->Draw(g_pImmediateContext,g_View,g_Projection,g_pConstantBuffer);
+	p_scene3d->Draw(g_pImmediateContext,g_View,g_Projection,g_pConstantBuffer,g_pConstantBufferLights);
 
 	
 

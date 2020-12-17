@@ -85,7 +85,7 @@ HRESULT Box3D::Init(ID3D11Device* pd3dDevice)
     if (FAILED(hr))
         return hr;
 
-    XMFLOAT4 WhiteColor = XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
+    // XMFLOAT4 WhiteColor = XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
 
     XMFLOAT2 UVs[] =
     {
@@ -135,7 +135,8 @@ HRESULT Box3D::Init(ID3D11Device* pd3dDevice)
         for (int i = 0; i < 4; ++i)
         {
             int indexV = (f * 4 + i);
-            vertices[f * 4 + i] = { Points[indicesVertexQuad[indexV]],   WhiteColor, Normals[f], UVs[i] };
+            // vertices[f * 4 + i] = { Points[indicesVertexQuad[indexV]],   WhiteColor, Normals[f], UVs[i] };
+            vertices[f * 4 + i] = { Points[indicesVertexQuad[indexV]],  GetObjectColor(), Normals[f], UVs[i] };
         }
     }
 

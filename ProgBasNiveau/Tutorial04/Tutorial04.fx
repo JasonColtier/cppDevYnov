@@ -12,6 +12,7 @@ cbuffer ConstantBuffer : register(b0)//indique dans quel point de départ va se t
 	matrix World;
 	matrix View;
 	matrix Projection;
+	float ObjectSpecular;
 }
 
 struct Light // quelle est le pramamètre qui définit map lumière ?
@@ -31,7 +32,7 @@ struct Light // quelle est le pramamètre qui définit map lumière ?
 
 cbuffer ConstantBufferLights : register(b1)
 {
-	Light lights[2];
+	Light lights[3];
 }
 
 
@@ -171,12 +172,12 @@ float4 GetAmbientColor()
 	return float4(0.001f, 0.001f, 0.001f, 1.0f);
 }
 
-float4 AccumulateLightContrib(LightContribution contrib[2])
+float4 AccumulateLightContrib(LightContribution contrib[3], float4 col)
 {
 	float4 color = GetAmbientColor();
-	for (int i = 0; i < 2; ++i)
+	for (int i = 0; i < 3; ++i)
 	{
-		color = color + contrib[i].Diffuse * lights[i].mColor + contrib[i].Specular * lights[1].mColor;
+		color = color + contrib[i].Diffuse * (lights[i].mColor +col) + contrib[i].Specular * (lights[i].mColor + col);
 	}
 	return color;
 }
@@ -188,11 +189,22 @@ float4 PS(VS_OUTPUT input) : SV_Target
 {
 	float3 WNormal = normalize(input.WNormal);
 
-	float MaterialSpecPower = 10;//influence le calcul de la speculaire. plus il est élevé, plus le mat va parraitre lisse et brillant, à l'inverse = rugeux
+//	float MaterialSpecPower = 1;//influence le calcul de la speculaire. plus il est élevé, plus le mat va parraitre lisse et brillant, à l'inverse = rugeux
+	float MaterialSpecPower = ObjectSpecular;//influence le calcul de la speculaire. plus il est élevé, plus le mat va parraitre lisse et brillant, à l'inverse = rugeux
 
-	LightContribution allLights[2];
+	LightContribution allLights[3];
+	
+//	for(Light light : lights){
+//	    light.mColor += input.Color;
+//	}
+//	
+//	for (int i = 0; i < 3; ++i)
+//    {
+//    	lights[i].mColor += input.Color;
+//    }
+	
 
-	for (int i = 0; i < 2; ++i)
+	for (int i = 0; i < 3; ++i)
 	{
 		if (lights[i].mType == 1) {//dir
 			allLights[i] = DirectionalLight_Phong(GetViewVector(View), WNormal, lights[i].mDirection, MaterialSpecPower);
@@ -217,5 +229,6 @@ float4 PS(VS_OUTPUT input) : SV_Target
 
 
 	// Accumulate and return lighting
-	return AccumulateLightContrib(allLights) * input.Color;
+//	return AccumulateLightContrib(allLights) * input.Color;
+	return AccumulateLightContrib(allLights,input.Color);
 }
