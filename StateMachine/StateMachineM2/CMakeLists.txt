@@ -20,6 +20,8 @@ set(HEADERS
     ${HEADER_DIR}/Shoot.h
     ${HEADER_DIR}/Reload.h
     ${HEADER_DIR}/Hide.h
+    ${HEADER_DIR}/Odometric.h
+    ${HEADER_DIR}/Signal.h
     
 )
 

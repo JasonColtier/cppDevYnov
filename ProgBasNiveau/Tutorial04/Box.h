@@ -10,7 +10,7 @@
 #include "Object.h"
 #include "resource.h"
 
-class Box3D : Object
+class Box3D : public Object
 {
 
 public:

@@ -1,8 +1,11 @@
+#include "Hero.h"
+
+
 #include <iostream>
 
 int main()
 {
-	std::cout << "Hy" << std::endl;
-
+	Hero hero;
+	hero.Run();
 	return 0;
 }

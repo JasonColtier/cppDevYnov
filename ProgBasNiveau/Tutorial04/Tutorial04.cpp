@@ -472,8 +472,8 @@ void InitScene(ID3D11Device* pDevice)
     g_Ground.Init(pDevice);
     g_Ground.Scale(XMFLOAT3(5, 0.1, 5));
 
-    // p_scene3d->AddObject(&g_Box);
-    // p_scene3d->AddObject(&g_Ground);
+    p_scene3d->AddObject(&g_Box);
+    p_scene3d->AddObject(&g_Ground);
 }
 
 
