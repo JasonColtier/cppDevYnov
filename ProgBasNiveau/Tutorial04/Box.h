@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Object.h"
+
 #include <windows.h>
 #include <d3d11_1.h>
 #include <d3dcompiler.h>
@@ -7,7 +9,6 @@
 #include <directxcolors.h>
 #include <windowsx.h>
 
-#include "Object.h"
 #include "resource.h"
 
 class Box3D : public Object
@@ -15,6 +16,7 @@ class Box3D : public Object
 
 public:
     Box3D();
+    Box3D(const Box3D&) = delete;//je crée un constructeur par copie qui va faire on purpose une erreur de compilation
     ~Box3D();
 
     // Initialize API Resources (VBuffer, IBuffer and Shader)
@@ -27,7 +29,8 @@ public:
     HRESULT Draw(ID3D11DeviceContext*);
 
     // Return World Transform
-    // const DirectX::XMMATRIX& GetTransform() const { return Transform; };
+    //const  DirectX::XMMATRIX& GetTransform() const { return Transform; }
+    const DirectX::XMMATRIX& GetTransform() override { return Transform; }
 
     // Translate the Box
     void Translate(const DirectX::XMFLOAT3& Translation);
@@ -39,7 +42,7 @@ public:
     void Scale(const DirectX::XMFLOAT3& Scale);
 
 private:
-    // DirectX::XMMATRIX Transform; // world transform
+     //DirectX::XMMATRIX Transform; // world transform
 
     // Store API resource
     ID3D11VertexShader* m_pVertexShader = nullptr;

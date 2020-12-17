@@ -399,16 +399,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Box.cpp" />
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="imgui-master\imgui.cpp" />
     <ClCompile Include="imgui-master\imgui_demo.cpp" />
     <ClCompile Include="imgui-master\imgui_draw.cpp" />
     <ClCompile Include="imgui-master\imgui_impl_dx11.cpp" />
     <ClCompile Include="imgui-master\imgui_impl_win32.cpp" />
     <ClCompile Include="imgui-master\imgui_widgets.cpp" />
-    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Scene3D.cpp" />
     <ClCompile Include="Tutorial04.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Buffers.h" />
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="imgui-master\imconfig.h" />
     <ClInclude Include="imgui-master\imgui.h" />
     <ClInclude Include="imgui-master\imgui_impl_dx11.h" />
@@ -420,6 +423,7 @@
     <ClInclude Include="Object.h" />
     <CLInclude Include="resource.h" />
     <ClInclude Include="Box.h" />
+    <ClInclude Include="Scene3D.h" />
     <ResourceCompile Include="Tutorial04.rc" />
   </ItemGroup>
   <ItemGroup>
