@@ -473,13 +473,14 @@ void InitScene(ID3D11Device* pDevice)
 	light2.mDirection = XMFLOAT4(1.0f, 1.0f, 1.0f,1.0f);
 	light2.mColor = XMFLOAT4(1, 0, 0,1);
 	light2.mType = LightTypes::Point;
-	light2.mAngle = 30;
 
 	LightStruct light3;
-	light3.mPosition = XMFLOAT4(0.0f, 2.f, -1.0f,1.0f);
-	light3.mDirection = XMFLOAT4(1.0f, 1.0f, 1.0f,1.0f);
+	light3.mPosition = XMFLOAT4(-3.0f, 2.f, -8.0f,1.0f);
+	light3.mDirection = XMFLOAT4(0.5f, 0.0f, 1.0f,1.0f);
 	light3.mColor = XMFLOAT4(1, 1, 1,1);
-	light3.mType = LightTypes::Point;
+	light3.mType = LightTypes::Spot;
+	light3.mAngle = 60;
+
 	
 	p_scene3d->AddLight(&light1);
 	p_scene3d->AddLight(&light2);

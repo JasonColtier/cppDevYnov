@@ -13,6 +13,9 @@ cbuffer ConstantBuffer : register(b0)//indique dans quel point de départ va se t
 	matrix View;
 	matrix Projection;
 	float ObjectSpecular;
+	
+	//les mats peuvent aller dans un constant buffer séparé
+	//
 }
 
 struct Light // quelle est le pramamètre qui définit map lumière ?
@@ -30,6 +33,7 @@ struct Light // quelle est le pramamètre qui définit map lumière ?
 
 };
 
+//b1 pour accéder au deuxième slot du constant buffer, il faut que ce soit raccord avec le VSSetConstantBuffer du cpp
 cbuffer ConstantBufferLights : register(b1)
 {
 	Light lights[3];
@@ -61,7 +65,7 @@ VS_OUTPUT VS(float4 Pos : POSITION, float4 Color : COLOR, float3 Normal : NORMAL
 	output.Pos = mul(output.WPos, View);
 	output.Pos = mul(output.Pos, Projection);
 
-	output.Color = Color;
+	output.Color = Color;//vertex color
 
 	return output;
 }
@@ -93,19 +97,36 @@ LightContribution Phong(float3 View, float3 InputNormalW, float3 LightDirW, floa
 	return res;
 }
 
-LightContribution PhongAngle(float3 View, float3 InputNormalW, float3 LightDirW, float SpotRadius, float3 SpotLightDir, float Distance, float SpecularPower)
+LightContribution PhongAngle(float3 View, float3 InputNormalW,float3 InputPosW, float3 LightDirW, float SpotRadius, float3 SpotLightDir, float Distance, float SpecularPower)
 {
-	LightContribution res = (LightContribution)0;//la light contribution globale
+	LightContribution res = (LightContribution)0;
+    
+    float attenuation = GetLightAttenuation(Distance);
 
-	float attenuation = GetLightAttenuation(Distance);//je calcule la luminosité de mon pixel en fonction de sa distance à la source lumineuse
-	attenuation *= dot(SpotLightDir, LightDirW);
+    //http://www.ozone3d.net/tutorials/glsl_lighting_phong_p3.php
+    float3 L = normalize(LightDirW);//vecteur de mon point vers la lumière
+	float3 D = normalize(SpotLightDir);//la direction de mon spot
 
-	float NDotL = saturate(dot(LightDirW, InputNormalW));
-	float3 R = normalize(LightDirW - 2 * NDotL * InputNormalW);
+    float radAngle = SpotRadius/2 * 3.14 / 180;//on travaille en Radians !
 
-	res.Diffuse = attenuation * NDotL; //dépend de la normale de la surface et de sa distance à la source de lumière
-	res.Specular = attenuation * pow(saturate(dot(View, R)), SpecularPower); // vecteur réflexion
-	return res;
+      //affiche un spot
+    if( dot(-L, D) > cos(radAngle) )//si le
+    {
+    
+        float3 N = normalize(InputNormalW);
+
+        res.Diffuse = 1; //dépend de la normale de la surface et de sa distance à la source de lumière
+                res.Specular = 1; // vecteur réflexion
+        float NDotL = saturate(dot(LightDirW, InputNormalW));
+            
+        float3 R = reflect(normalize(-LightDirW), normalize(InputNormalW)); // normalize(LightDirW - 2 * NDotL * InputNormalW);
+            
+        res.Diffuse = attenuation * NDotL ; //dépend de la normale de la surface et de sa distance à la source de lumière
+        res.Specular = attenuation * pow(saturate(dot(View, R)), SpecularPower); // vecteur réflexion
+        
+    }	
+    
+    return res;
 }
 
 LightContribution PointLight_Phong(float3 View, float3 InputPosW, float3 InputNormalW, float3 LightPosW, float SpecularPower)
@@ -136,7 +157,7 @@ LightContribution SpotLight_Phong(float3 View, float3 InputPosW, float3 InputNor
 	float3 direction = LightPosW - InputPosW;//l'orientation de mon vertex du vertex shader vers la lumière
 	float distance = length(direction);
 
-	res = PhongAngle(View, InputNormalW, direction, Radius, SpotLightDir, distance, SpecularPower);
+	res = PhongAngle(View, InputNormalW,InputPosW, direction, Radius, SpotLightDir, distance, SpecularPower);
 
 	return res;
 }
@@ -164,7 +185,7 @@ float3 GetSpotLightPos()
 
 float3 GetSpotLightDir()
 {
-	return normalize(float3(-3.5f, -1.0f, -3.0f));
+//	return normalize(float3(-3.5f, -1.0f, -3.0f));
 }
 
 float4 GetAmbientColor()
@@ -172,12 +193,17 @@ float4 GetAmbientColor()
 	return float4(0.001f, 0.001f, 0.001f, 1.0f);
 }
 
-float4 AccumulateLightContrib(LightContribution contrib[3], float4 col)
+float4 AccumulateLightContrib(LightContribution contrib[3], float4 objectColor)//objectColor correspond à la couleur de mon objet (les vertex)
 {
 	float4 color = GetAmbientColor();
+	
+    //problème : la speculaire devient colorée
+	
 	for (int i = 0; i < 3; ++i)
 	{
-		color = color + contrib[i].Diffuse * (lights[i].mColor +col) + contrib[i].Specular * (lights[i].mColor + col);
+	    // comment faire en sorte que les couleurs des lights s'additionnent correctement avec celles des matériaux ?
+		float4 coloredLightByObject = lights[i].mColor + objectColor;
+		color = color + contrib[i].Diffuse * coloredLightByObject + contrib[i].Specular * lights[i].mColor;
 	}
 	return color;
 }
@@ -194,15 +220,6 @@ float4 PS(VS_OUTPUT input) : SV_Target
 
 	LightContribution allLights[3];
 	
-//	for(Light light : lights){
-//	    light.mColor += input.Color;
-//	}
-//	
-//	for (int i = 0; i < 3; ++i)
-//    {
-//    	lights[i].mColor += input.Color;
-//    }
-	
 
 	for (int i = 0; i < 3; ++i)
 	{
@@ -216,16 +233,6 @@ float4 PS(VS_OUTPUT input) : SV_Target
 			allLights[i] = PointLight_Phong(GetViewVector(View), input.WPos, WNormal, lights[i].mPosition, MaterialSpecPower);
 		}
 	}
-
-	//Compute Lighting
-	
-
-	//allLights[1] = PointLight_Phong(GetViewVector(View), input.WPos, WNormal, GetPointLightPos(), MaterialSpecPower);
-	//allLights[2] = SpotLight_Phong(GetViewVector(View), input.WPos, WNormal, mPosition[2], mDirection[2], MaterialSpecPower,30);
-
-
-	//passer get sun direction, point light pos en constante et les envoyer au shader
-
 
 
 	// Accumulate and return lighting

@@ -19,6 +19,8 @@ void Scene3D::Draw(ID3D11DeviceContext* pContext, DirectX::XMMATRIX g_view, Dire
 	ConstantBuffer cb;
 
 	//ajout des lights contenues dans le LightBuffer
+	//on prend une zone de mémoire qu'on ajoute au constantbuffer pour que le hlsl y ait accès
+	//memcopy dans la vram
 	pContext->UpdateSubresource(pContextLights, 0, nullptr, &lightsBuffer, 0, 0);
 
 

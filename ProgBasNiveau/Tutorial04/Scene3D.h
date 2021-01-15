@@ -12,7 +12,7 @@ class Object;
 class Scene3D
 {
 	std::vector<Object*> objects;//les objets qui seront rendus dans ma scène. Ajoutés dans le InitScene de tutorial.cpp
-	ConstantBufferLights lightsBuffer;//contiendra les infos de mes lights (pour l'instant 2)
+	ConstantBufferLights lightsBuffer;//contiendra les infos de mes lights (pour l'instant 3)
 	int indexLight = 0;//index pour ajouter mes lights au lightBuffer
 
 public:

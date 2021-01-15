@@ -34,7 +34,7 @@ struct LightStruct // quelle est le pramamètre qui définit map lumière ?
 
 	LightTypes mType;
 
-	XMFLOAT2 dummy;
+	XMFLOAT2 dummy;//pourquoi ce dummy ? par ce qu'il faut toujours alligner les valeurs par paquet de float4, si on ne le met pas ça décalle tout
 	
 };
 
