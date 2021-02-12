@@ -3,10 +3,12 @@
 #include <ostream>
 #include <QWidget>
 #include <thread>
+#include "Dispatcher.h"
 
 class IView : public QWidget
 {
-    
+    Q_OBJECT
+
 public:
     explicit IView(QWidget* pParent = nullptr)
         :QWidget(pParent)
@@ -15,5 +17,6 @@ public:
     }
 
     virtual  ~IView() = default;//interface = destructeur virtuel
+
     
 };

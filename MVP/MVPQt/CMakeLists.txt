@@ -29,11 +29,18 @@ set (HEADERS
     ${HEADER_DIR}/IView.h
     ${HEADER_DIR}/IPresenter.h
     ${HEADER_DIR}/Threading.h
+    ${HEADER_DIR}/Signal.h
+    ${HEADER_DIR}/Trigger.h
+
+    ${HEADER_DIR}/Dispatcher.h
 
 )
 
 set (SOURCES
     ${SOURCE_DIR}/BackgroundWorker.cpp
+    ${SOURCE_DIR}/ConcreteView.cpp
+    ${SOURCE_DIR}/ConcreteModel.cpp
+    ${SOURCE_DIR}/ConcretePresenter.cpp
     ${SOURCE_DIR}/main.cpp
 )
 

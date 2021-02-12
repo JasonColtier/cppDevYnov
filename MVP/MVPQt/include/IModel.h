@@ -2,9 +2,12 @@
 #include <iostream>
 #include <ostream>
 #include <thread>
+#include "Dispatcher.h"
 
 
 #include "BackgroundWorker.h"
+#include "Dispatcher.h"
+#include <iostream>
 
 class IModel
 {
@@ -16,7 +19,7 @@ public:
         std::cout << "model : "<<std::this_thread::get_id() <<std::endl;
     }
 
-    virtual ~IModel() = default;
+	virtual ~IModel() = default;
 
     void Print() const
     {
@@ -27,16 +30,15 @@ public:
           }  
         );
     }
-
-    
     //on passe une fonction avec des arguments
-    template<typename... Args>
-    void AsyncPost(std::function<void(Args...)>f)
-    {
-        m_pBackgroundWorker->Async(f);
-    }
 
-protected :
-    BackgroundWorker* m_pBackgroundWorker;
-    
+	template<typename... Args>
+	void AsyncPost(std::function<void(Args...)> f)
+	{
+		m_pBackgroundWorker->Async(f);
+	}
+
+protected:
+	BackgroundWorker* m_pBackgroundWorker;
 };
+
